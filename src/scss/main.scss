@@ -1,0 +1,101 @@
+$main-bg-color: #000000;
+$shadow-color: #444444;
+$light-block-color: #96c7bb;
+$main-block-color: #4bf9ff;
+$hover-block-color: #ff0080;
+$main-text-color: #ffffff;
+
+
+$block-height: 1080px;
+
+.block {
+    position: relative;
+    height: $block-height;
+    background-color: $main-bg-color;
+}
+
+.about{
+    background-color: $main-block-color;
+    width: 100px;
+    height: 100px;
+}
+
+.about__roles {
+    float: right;
+    margin: 100px 50px 0 0;
+}
+
+.about__roles-active {
+    background-color: $hover-block-color;
+}
+
+.about__roles:hover {
+    transform: translate(-250px, 140px) scale(5) rotate(15deg);
+    transition: 1s;
+    background-color: $hover-block-color;
+}
+
+.about__roles:not(:hover) {
+    transition: 1s;
+}
+
+.about__choise {
+    float: right;
+    margin: 250px 300px 0 0;
+}
+
+.about__choise:hover {
+    transform: translate(-110px, 10px) scale(5) rotate(-20deg);
+    transition: 1s;
+    background-color: $hover-block-color;
+}
+
+.about__choise:not(:hover) {
+    transition: 1s;
+}
+
+.about__origin {
+    float: right;
+    margin: 450px -300px 0 0;
+}
+
+.about__origin:hover {
+    transform: translate(-140px, -60px) scale(5) rotate(10deg);
+    transition: 1s;
+    background-color: $hover-block-color;
+}
+
+.about__origin:not(:hover) {
+    transition: 1s;
+}
+
+.about__freedom{
+    float: right;
+    margin: 600px -400px 0 0;
+}
+
+.about__freedom:hover {
+    transform: translate(-170px, -80px) scale(5) rotate(-5deg);
+    transition: 1s;
+    background-color: $hover-block-color;
+}
+
+.about__freedom:not(:hover) {
+    transition: 1s;
+}
+
+.about__ecology {
+    float: right;
+    margin: 750px 50px 0 0;
+}
+
+.about__ecology:hover {
+    transform: translate(0, 10px) scale(5) rotate(15deg);
+    transition: 1s;
+    background-color: $hover-block-color;
+}
+
+.about__ecology:not(:hover) {
+    transition: 1s;
+}
+

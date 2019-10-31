@@ -1,0 +1,187 @@
+$main-bg-color: #000000;
+$shadow-color: #444444;
+$light-block-color: #96c7bb;
+$main-block-color: #4bf9ff;
+$hover-block-color: #ff0080;
+$main-text-color: #ffffff;
+$dark-block-color: #720039;
+
+$box-h: 200px;
+$view-h: $box-h * 10;
+$gardient-angle: 135deg;
+$duration: 5s;
+
+.box {
+    height: $box-h;
+    width: $box-h;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 35px;
+    left: 50%;
+    top: 50%;
+    margin-top: -$box-h/2;
+    margin-left: -$box-h/2;
+    &::after {
+        position: relative;
+        content: '';
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: $view-h;
+        background: linear-gradient($gardient-angle, $light-block-color 0%, $main-block-color 50%, $dark-block-color 100%);
+        animation: animatebg $duration*2 infinite linear;
+    }
+} 
+
+@keyframes animatebg{
+    0% {
+        top: 0;
+    }
+    50% {
+        top: $box-h - $view-h;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+.logo div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: #fff 9px solid;
+    z-index: 2;
+    &.logo__dot {
+        border: 7px solid #fff;
+        border-radius: 10em;
+        left: auto;
+        right: 23%;
+        top: 23%;
+    }
+}  
+
+.logo__border {
+    width: 74%;
+    height: 74%;
+    border-radius: 10em;
+    margin-top: -37%;
+    margin-left: -37%;
+}
+
+.logo__circle {
+    width: 48%;
+    height: 48%;
+    border-radius: 10em;
+    margin-top: -24%;
+    margin-left: -24%;
+}
+
+@keyframes animatebox {
+    0% {
+        transform: scale(0);
+        border-radius: 35px;
+    }
+    5% {
+        transform: scale(1.1);
+        border-radius: 10em;
+    }
+    10% {
+        transform: scale(1);
+        border-radius: 35px;
+    }
+    90% {
+        transform: scale(1);
+        border-radius: 35px;
+    }
+    95% {
+        transform: scale(1.1);
+        border-radius: 10em;
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+.box {
+    animation: animatebox $duration*2 infinite alternate;
+}
+
+@keyframes animateborder {
+    0% {
+        border-radius: 10em;
+        transform: scale(0);
+        opacity: 0;
+    }
+    5% {
+        opacity: 0;
+    }
+    20% {
+        border-radius: 35px;
+        transform: scale(1);
+        opacity: 1;
+    }
+    85% {
+        border-radius: 35px;
+        transform: scale(1);
+    }
+}
+.logo__border {
+    animation: animateborder $duration infinite alternate;
+}
+
+@keyframes animatecircle {
+    0% {
+        transform: scale(0);
+    }
+    10% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    18% {
+        transform: scale(1.3);
+        opacity: 1;
+    }
+    25% {
+        transform: scale(1);
+    }
+    90% {
+        transform: scale(1);
+        background-color: transparent;
+    }
+    95% {
+        transform: scale(1.2);
+        background-color: #fff;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.logo__circle {
+    animation: animatecircle $duration infinite alternate;
+}
+
+@keyframes atest {
+    0%{
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    85% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.logo__dot {
+    animation: atest $duration infinite alternate;
+}

@@ -1,0 +1,35 @@
+$main-bg-color: #000000;
+$shadow-color: #444444;
+$light-block-color: #96c7bb;
+$main-block-color: #4bf9ff;
+$hover-block-color: #ff0080;
+$main-text-color: #ffffff;
+$dark-block-color: #720039;
+
+#block {
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: $hover-block-color;
+}
+
+#butn {
+    background-color: #c28e3f;
+    margin: 10px;
+    width: 125px;
+}
+
+.parent {
+    width: 200px;
+    height: 200px;
+    display: grid;
+    border: solid black;
+    
+}
+
+.child {
+    width: 100px;
+    height: 100px;
+    border: solid black;
+    margin: auto;
+}
