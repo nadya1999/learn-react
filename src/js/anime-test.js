@@ -1,4 +1,5 @@
 import anime from 'animejs/lib/anime.es.js';
+
 var elements = document.getElementById('block');
 
 let blockMove = anime({

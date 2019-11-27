@@ -6,31 +6,37 @@ $hover-block-color: #ff0080;
 $main-text-color: #ffffff;
 
 
-$block-height: 1080px;
+$screen-height: 1080px;
+$block-height: 100px;
 
-.block {
-    position: relative;
-    height: $block-height;
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.first-screen {
+    height: $screen-height;
     background-color: $main-bg-color;
+    padding: 10px;
+    display: grid;
+    grid-template: repeat(auto-fill, minmax(100px, 1fr));
+    grid-auto-flow: column;
+    justify-content: space-between;
 }
 
 .about{
     background-color: $main-block-color;
-    width: 100px;
-    height: 100px;
+    width: $block-height;
+    height: $block-height;
+    margin: 10px;
 }
 
 .about__roles {
-    float: right;
-    margin: 100px 50px 0 0;
-}
-
-.about__roles-active {
-    background-color: $hover-block-color;
+    margin: 10px;
 }
 
 .about__roles:hover {
-    transform: translate(-250px, 140px) scale(5) rotate(15deg);
+    transform: scale(1.2) rotate(5deg);
     transition: 1s;
     background-color: $hover-block-color;
 }
@@ -40,12 +46,11 @@ $block-height: 1080px;
 }
 
 .about__choise {
-    float: right;
-    margin: 250px 300px 0 0;
+    margin: 10px;
 }
 
 .about__choise:hover {
-    transform: translate(-110px, 10px) scale(5) rotate(-20deg);
+    transform: scale(1.3) rotate(-3deg);
     transition: 1s;
     background-color: $hover-block-color;
 }
@@ -55,12 +60,11 @@ $block-height: 1080px;
 }
 
 .about__origin {
-    float: right;
-    margin: 450px -300px 0 0;
+    margin: 10px;
 }
 
 .about__origin:hover {
-    transform: translate(-140px, -60px) scale(5) rotate(10deg);
+    transform: scale(1.2) rotate(6deg);
     transition: 1s;
     background-color: $hover-block-color;
 }
@@ -70,12 +74,11 @@ $block-height: 1080px;
 }
 
 .about__freedom{
-    float: right;
-    margin: 600px -400px 0 0;
+    margin: 10px;
 }
 
 .about__freedom:hover {
-    transform: translate(-170px, -80px) scale(5) rotate(-5deg);
+    transform: scale(1.2) rotate(-5deg);
     transition: 1s;
     background-color: $hover-block-color;
 }
@@ -85,12 +88,11 @@ $block-height: 1080px;
 }
 
 .about__ecology {
-    float: right;
-    margin: 750px 50px 0 0;
+    margin: 10px;
 }
 
 .about__ecology:hover {
-    transform: translate(0, 10px) scale(5) rotate(15deg);
+    transform: scale(1.2) rotate(2deg);
     transition: 1s;
     background-color: $hover-block-color;
 }
@@ -99,3 +101,6 @@ $block-height: 1080px;
     transition: 1s;
 }
 
+.article-list__li {
+    list-style: none;
+}
